@@ -1,0 +1,196 @@
+:root {
+    --main: #7c5dfa;
+    --nav-bg: #373b53;
+    --light-body: #f2f2f2;
+    --orange: #ff8f00;
+    --green: #33d69f;
+    --black: #0c0e16;
+    --text-gray: #888eb0;
+    --red: #ec5757;
+}
+* {
+    font-family: 'League Spartan', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--black);
+    background-repeat: no-repeat;
+}
+body {
+    background-color: var(--light-body);
+}
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+button:disabled {
+    filter: grayscale(50%);
+    cursor: auto;
+}
+label {
+    color: var(--text-gray);
+    font-size: 1.1rem;
+}
+small {
+    color: var(--text-gray);
+}
+input {
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    margin: 10px 0;
+    border: 1px solid var(--text-gray);
+    outline: none;
+}
+input:read-only {
+    cursor: auto;
+}
+ul {
+    list-style: none;
+}
+
+/* style the main element */
+main {
+    width: calc(100% - 103px);
+    position: absolute;
+    top: 0;
+    left: 103px;
+    display: flex;
+    justify-content: center;
+}
+main > div {
+    max-width: 1000px;
+    width: 90%;
+    padding: 75px 0;
+}
+@media (max-width: 992px) {
+    main {
+        left: 0;
+        width: 100%;
+        top: 99px;
+    }
+}
+
+/* Global classes */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.d-none {
+    display: none;
+}
+.text-gray {
+    color: var(--text-gray);
+}
+.main-btn,
+.red-btn,
+.normal-btn,
+.dark-btn {
+    border-radius: 30px;
+    padding: 15px;
+    font-size: 1.05rem;
+    font-weight: bold;
+}
+.main-btn {
+    background-color: var(--main);
+    color: white;
+}
+.red-btn {
+    background-color: var(--red);
+    color: white;
+}
+.normal-btn {
+    color: #7e88c3;
+    background-color: #f9fafe;
+}
+.dark-btn {
+    background-color: #373b53;
+    color: var(--text-gray);
+}
+.main-btn:hover {
+    background-color: #9277ff;
+}
+.red-btn:hover {
+    background-color: #ff9797;
+}
+.normal-btn:hover {
+    background-color: #dfe3fa;
+}
+.dark-btn:hover {
+    background-color: #0c0e16;
+}
+
+/* Styling nav */
+nav {
+    background-color: var(--nav-bg);
+    position: sticky;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 103px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+button[aria-label="dark-light mode"] {
+    width: 40px;
+    height: 40px;
+    background-position: center;
+}
+button[data="dark"] {
+    background-image: url(../images/moon.svg);
+}
+button[data="light"] {
+    background-image: url(../images/sun.svg);
+}
+img[alt="avatar"] {
+    width: 40px;
+    border-radius: 50%;
+}
+.line-sparator {
+    border-bottom: #494e6e solid 2px;
+}
+.avatar,
+.line-sparator {
+    padding: 30px 0;
+}
+nav .two {
+    display: inherit;
+    flex-direction: inherit;
+}
+@media (max-width: 992px) {
+    nav {
+        flex-direction: row;
+        width: 100vw;
+        height: 99px;
+        border-radius: 0;
+        align-items: center;
+    }
+    .avatar,
+    .line-sparator {
+        padding: 0 15px;
+    }
+    nav .two {
+        height: 75%;
+    }
+    .line-sparator {
+        border-right: #494e6e solid 2px;
+        border-bottom: none;
+    }
+    .hide-mobile {
+        display: none !important;
+    }
+}
+@media (max-width: 576px) {
+    *:not(h1) {
+        font-size: 1rem !important;
+    }
+}

@@ -1,0 +1,142 @@
+.go-back {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+.go-back::before {
+  content: url(../images/arrow-left.svg);
+  margin-right: 10px;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: 20% 1fr 280px;
+  box-shadow: 0 10px 10px -10px rgba(72,84,159,.1);
+  border-radius: 5px;
+  padding: 20px;
+  background-color: white;
+}
+.options p {
+  margin-right: 10px;
+}
+.options div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* Delete confirm message */
+.deletion-confirm {
+  position: absolute;
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+}
+.bg-full {
+  width: 100%;
+  height: 100%;
+  background-color: #00000063;
+  top: 0;
+  position: absolute;
+  left: 0;
+}
+.deletion-confirm p {
+  margin: 10px 0;
+}
+.deletion-confirm div {
+  display: flex;
+  justify-content: flex-end;
+}
+.deletion-confirm h3 {
+  font-size: 1.8rem;
+}
+.deletion-confirm button:nth-of-type(1) {
+  color: #7e88c3;
+  background-color: #f9fafe;
+  margin-right: 10px;
+}
+
+/* Content of the invoice */
+.invoice-content {
+  background-color: white;
+  box-shadow: 0 10px 10px -10px rgba(72,84,159,.1);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 30px 0;
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  row-gap: 30px;
+}
+.fact {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  row-gap: 10px;
+  align-content: flex-start;
+  margin-bottom: 10px;
+}
+.invoice-content strong {
+  font-size: 1.25rem;
+}
+.invoice-content > div:nth-of-type(1) {
+  display: grid;
+  grid-template-columns: auto 100px;
+  justify-content: space-between;
+}
+.invoice-content > div:nth-of-type(2) {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.5fr;
+  justify-content: space-between;
+  gap: 30px;
+}
+.invoice-footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
+  justify-content: space-between;
+}
+.invoice-footer > div {
+  padding: 25px;
+}
+.invoice-footer > div:last-child {
+  background-color: #373b53;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+.invoice-footer > div:first-child {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;  
+}
+.invoice-footer > div:last-child p {
+  color: white;
+  font-size: 1.4rem;
+}
+.price-info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+@media (max-width: 992px) {
+  .options  {
+    grid-template-columns: 280px 1fr;
+    grid-template-rows: repeat(2, auto);
+    row-gap: 10px;
+  }
+  .span-2 {
+    grid-column: span 2;
+  }
+  .invoice-content > div:nth-of-type(1) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    row-gap: 20px;
+  }
+  .invoice-content > div:nth-of-type(2) {
+    grid-template-columns: repeat(2, auto);
+  }
+}

@@ -1,0 +1,95 @@
+/* For stylying in dark mode*/
+:root {
+  --dark-body: #141625;
+  --dark-section: #252945;
+  --dark-gray: #DFE3FA;
+}
+
+body.dark-body .normal-btn {
+  color: rgb(126, 136, 195);
+}
+
+/* Body --------------------------------------------------- */
+body.dark-body {
+  background-color: var(--dark-body);
+  color: white;
+}
+
+/* Invoices List ------------------------------------------ */
+body.dark-body .invoices .invoice {
+  background-color: #1E2139;
+  box-shadow: 0 10px 10px -10px rgba(72,84,159,.1)
+}
+
+/* Filter ------------------------------------------------- */
+body.dark-body .filter-list {
+  background-color: #1e2139;
+  box-shadow: 0px 10px 20px rgb(0 0 0 / 25%);
+}
+
+/* For text ---------------------------------- -------------*/
+body.dark-body * {
+  color: white;
+}
+body.dark-body .text-gray,
+body.dark-body label,
+body.dark-body small {
+  color: var(--dark-gray);
+}
+
+/* For lists -----------------------------------------------*/
+body.dark-body ul {
+  background-color: var(--dark-section);
+  box-shadow: 0px 10px 20px rgb(0 0 0 / 25%);
+}
+
+/* For Forms ------------------------------------------------*/
+body.dark-body form {
+  background-color: #1e2139;
+}
+
+/* For inputs ---------------------------------------------- */
+body.dark-body input {
+  background-color: var(--dark-section);
+  border: none;
+  color: white;
+}
+
+/* For draft status ---------------------------------------- */
+body.dark-body .status-draft {
+  color: white;
+  background-color: rgb(223 227 250 / 6%);
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  padding: 12px;
+  border-radius: 4px;
+}
+body.dark-body .status-draft::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  margin-right: 15px;
+}
+
+/* Delete confirm message */
+body.dark-body .deletion-confirm {
+  background-color: #1e2139;
+  box-shadow: 0 10px 10px -10px rgba(72,84,159,.1);
+}
+
+/* Single Invoice Page */
+body.dark-body .options,
+body.dark-body .invoice-content {
+  background-color: #1E2139;
+  box-shadow: rgba(72, 84, 159, 0.1) 0px 10px 10px -10px;
+}
+body.dark-body .invoice-footer > div:first-child {
+  background-color: #252945;
+}
+body.dark-body .invoice-footer > div:last-child {
+  background-color: #0c0e16;
+}
