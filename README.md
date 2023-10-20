@@ -1,5 +1,5 @@
 # Invoice app
-This challenge is from fornt-end mentor with hardness "GURU", I enjoied working on this project as it teached me alot, it contains lots of common big websites features:
+This challenge is from front-end mentor with hardness "GURU", I enjoied working on this project as it teached me alot,it contains lots of common big websites features:
 
 - Create, read, update, and delete invoices
 - Receive form validations when trying to create/edit an invoice
