@@ -73,7 +73,7 @@ function App() {
             <Statusbar
               openForm={openForm}
               setOpenForm={setOpenForm}
-              />
+            />
             <InvoicesList />
           </>
         }/>
